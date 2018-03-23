@@ -1,16 +1,16 @@
-# Design Patterns
-
-## [Strategy Pattern](StrategyPatternExample/README.md)
-
-## [Decorator Pattern](DecoratorPatternExample/README.md)
-
-## [Observer Pattern]
-
-### Beispiel
+## Decorator Pattern
 
 ### Problem
 
+Klassenexplosion
+
+### Beispiel
+
+Ein Kaffehaus will den Preis seiner Getränke mit einem Programm berechnen. Aber da man zu jedem Getränk noch belibig viele Zusätze dazugeben kann bräuchte man für jede Kombination eine eigene Klasse oder ein komplexes Variablenkonstrukt.
+
 ### Lösung
+
+Man nimmt eine der unmodifizierten 
 
 ### UML
 
@@ -117,18 +117,9 @@ Letztens können die verschiedenen Kaffes erstellt werden
 
 public class Main{
 	public static void main(String[] args){
-		Getraenk kaffe1 = new SpinachAddOn(new ChilliAddOn(new Espresso));
-		Getraenk kaffe2 = new MilkAddOn(new ChocolateAddOn(new Decaffinated));
+		Getraenk kaffe1 = new SpinachAddOn(new ChilliAddOn(new Espresso()));
+		Getraenk kaffe2 = new MilkAddOn(new ChocolateAddOn(new Decaffinated()));
 	}
 }
 
 ```
-
-## Factory Pattern (Simple/Abstract)
-
-
-## Proxy Pattern
-
-## Adapter Pattern
-
-## Command Pattern
