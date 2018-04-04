@@ -14,7 +14,7 @@ Z.B.: Es gibt 3 verschiedene Arten von Enten von denen 2 die selbe implementatio
 Die verschiedenen Enten werden nicht durch Vererbung sondern durch Komposition realisiert. D.H.: Man hat einen Pool an verschienenen Implementationen der verschiedenen Funktionen aus denen man seine Enten à la carte (pick and choose) zusammenstellen kann.
 
 ### UML
-![Ente Strategy UML-Diagramm](StrategyUML.png.png "Ente Strategy")
+![Ente Strategy UML-Diagramm](StrategyUML.png "Ente Strategy")
 
 ### Code
 Zuerst werden Interfaces für die verschiedenen Funktionen der Ente definiert.
