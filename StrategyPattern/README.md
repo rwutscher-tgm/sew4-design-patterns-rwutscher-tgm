@@ -20,6 +20,7 @@ Die verschiedenen Enten werden nicht durch Vererbung sondern durch Komposition r
 Zuerst werden Interfaces für die verschiedenen Funktionen der Ente definiert.
 
 ```java
+
 public interface DisplayStrategy{
 	public void display();
 }
@@ -31,6 +32,7 @@ public interface QuackStrategy{
 public interface FlyStrategy{
 	public void fly();
 }
+
 ```
 
 Dann kann man die Ente Klasse schreiben in der man in den Funktionen einfach 
