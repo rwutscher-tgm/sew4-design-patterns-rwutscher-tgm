@@ -8,5 +8,8 @@ public class Main {
         PhoneDisplay d2 = new PhoneDisplay(w1);
 
         w1.simulateChange();
+
+        d1.close();
+        d2.close();
     }
 }

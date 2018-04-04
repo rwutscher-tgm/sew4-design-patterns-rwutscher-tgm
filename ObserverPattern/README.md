@@ -16,39 +16,96 @@ Man erstellt ein Objekt (Observable) das die gewünschten Daten und eine Collect
 
 ### Code
 
-Als erstes müssen zwei abstrakte Klassen und ein Interface erstellt werden:
+Als erstes müssen drei abstrakte Klassen erstellt werden:
 
 * Die Observable Klasse mit den Methoden add(), remove(), notifyObservers()
 * Die Observer Klasse mit der Methode update()
-* Das Display Interface mit der Methode display()
+* Die Display Klasse mit den Methoden init(), close(), update()
 
 ```java
 
 public abstract class Observable{
-	private ArrayList<Observer> observers = new ArrayList();
+    // Die Liste der angemeldeten Observer
+    protected ArrayList<Observer> observers = new ArrayList();
 
-	public void add(Observer observer){
-		this.observers.add(observer);
-	}
+    /**
+     * Wird vom Observer zum anmelden am Observable verwendet
+     * @param observer der Observer der angemeldet werden soll
+     */
+    public void add(Observer observer){
+        this.observers.add(observer);
+    }
 
-	public void remove(Observer observer){
-		this.observers.remove(observer);
-	}
+    /**
+     * Wird vom Observer zum abmelden vom Observable verwendet
+     * @param observer der Observer der abgemeldet werden soll
+     */
+    public void remove(Observer observer){
+        this.observers.remove(observer);
+    }
 
-	public void notifyObservers(){
-		for(int i = 0; i < observers.size(); i++){
+    /**
+     * Benachrichtigt die Observer, dass sich die Daten geändert haben
+     */
+    public void notifyObservers(){
+        for(int i = 0; i < observers.size(); i++){
             observers.get(i).update();
         }
-	}
+    }
 }
 
 public abstract class Observer{
-	public abstract void update();
+
+    /**
+     * Aktualisiert die gespeicherten Wetterdaten mit denen von der Wetterstation
+     */
+    public abstract void update();
+
+    /**
+     * Meldet das Display von der Wetterstation ab
+     */
+    public abstract void close();
 }
 
-public interface Display {
-    public void display();
+public abstract class Display extends Observer{
+
+    protected WeatherStation weatherStation;
+
+    protected float temperature;
+    protected float humidity;
+    protected float windspeed;
+    protected double lightspeed;
+
+    /**
+     * Initialisiert Den Display indem er sich bei der Wetterstation anmeldet und die aktuellen Daten anzeigt
+     * @param weatherStation Die Wetterstation bei der sich das Display anmelden soll
+     */
+    protected void init(WeatherStation weatherStation){
+        this.weatherStation = weatherStation;
+        this.weatherStation.add(this);
+
+        this.update();
+    }
+
+    public void close(){
+        this.weatherStation.remove(this);
+    }
+
+    public void update(){
+        this.temperature = weatherStation.getTemperature();
+        this.humidity = weatherStation.getHumidity();
+        this.windspeed = weatherStation.getWindspeed();
+        this.lightspeed = weatherStation.getLightspeed();
+
+        this.display();
+    }
+
+    /**
+     * Zeigt die aktuellen Daten an
+     */
+    public abstract void display();
 }
+
 
 ```
 
@@ -96,43 +153,19 @@ public class WeatherStation extends Observable{
 
 }
 
-public class PhoneDisplay extends Observer implements Display{
-
-    private WeatherStation weatherStation;
-
-    private float temperature;
-    private float humidity;
-    private float windspeed;
-    private double lightspeed;
+public class PhoneDisplay extends Display{
 
     public PhoneDisplay(WeatherStation weatherStation){
-        this.weatherStation = weatherStation;
-        this.weatherStation.add(this);
-
-        this.temperature = weatherStation.getTemperature();
-        this.humidity = weatherStation.getHumidity();
-        this.windspeed = weatherStation.getWindspeed();
-        this.lightspeed = weatherStation.getLightspeed();
-    }
-
-    public void close(){
-        this.weatherStation.remove(this);
+        this.init(weatherStation);
     }
 
     public void display(){
         System.out.println("----------\n- Temperature: "+this.temperature+"\n- Humidity: "+this.humidity+"\n- Windspeed: "+this.windspeed+"\n- Lightspeed: "+this.lightspeed+"\n----------");
     }
-    public void update(){
-        this.temperature = weatherStation.getTemperature();
-        this.humidity = weatherStation.getHumidity();
-        this.windspeed = weatherStation.getWindspeed();
-        this.lightspeed = weatherStation.getLightspeed();
 
-        this.display();
-    }
 }
 
-public class TVDisplay extends Observer implements Display{
+public class TVDisplay extends Display{
 
     private WeatherStation weatherStation;
 
@@ -142,29 +175,11 @@ public class TVDisplay extends Observer implements Display{
     private double lightspeed;
 
     public TVDisplay(WeatherStation weatherStation){
-        this.weatherStation = weatherStation;
-        this.weatherStation.add(this);
-
-        this.temperature = weatherStation.getTemperature();
-        this.humidity = weatherStation.getHumidity();
-        this.windspeed = weatherStation.getWindspeed();
-        this.lightspeed = weatherStation.getLightspeed();
-    }
-
-    public void close(){
-        this.weatherStation.remove(this);
+        this.init(weatherStation);
     }
 
     public void display(){
         System.out.println("Temperature: "+this.temperature+" Humidity: "+this.humidity+" Windspeed: "+this.windspeed+" Lightspeed: "+this.lightspeed);
-    }
-    public void update(){
-        this.temperature = weatherStation.getTemperature();
-        this.humidity = weatherStation.getHumidity();
-        this.windspeed = weatherStation.getWindspeed();
-        this.lightspeed = weatherStation.getLightspeed();
-
-        this.display();
     }
 }
 
@@ -184,8 +199,10 @@ public class Main {
         PhoneDisplay d2 = new PhoneDisplay(w1);
 
         w1.simulateChange();
+
+        d1.close();
+        d2.close();
     }
 }
-
 
 ```
