@@ -13,7 +13,7 @@ Es wird eine Wetterstation aufgestellt die mehrere Wetterdaten misst. Viele Disp
 Man erstellt ein Objekt (Observable) das die gewünschten Daten und eine Collection der Objekte die benachrichtigt werden wollen. Die Objekte die wissen wollen wann sich die Daten ändern (Observer) können sich beim Observable registrieren und abmelden.
 
 ### UML
-
+![Observer UML-Diagramm](ObserverUML.png "Observer")
 ### Code
 
 Als erstes müssen drei abstrakte Klassen erstellt werden:
@@ -166,13 +166,6 @@ public class PhoneDisplay extends Display{
 }
 
 public class TVDisplay extends Display{
-
-    private WeatherStation weatherStation;
-
-    private float temperature;
-    private float humidity;
-    private float windspeed;
-    private double lightspeed;
 
     public TVDisplay(WeatherStation weatherStation){
         this.init(weatherStation);
