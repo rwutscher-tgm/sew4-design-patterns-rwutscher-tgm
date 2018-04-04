@@ -8,3 +8,10 @@
 * Proxy Pattern
 * Adapter Pattern
 * Command Pattern
+
+# Grundsätze für Design Patterns
+
+1) Trennen von veränderbarem und unveränderbarem (Kapselung)
+1) Favorisieren von Kapselung über Vererbung
+1) Programmieren auf interfaces und nicht auf Implementierungen
+1) Streben nach loser Koppelung
