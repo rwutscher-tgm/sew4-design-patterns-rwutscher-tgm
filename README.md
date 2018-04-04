@@ -1,10 +1,10 @@
 # Design Patterns
 
-## [Strategy Pattern](StrategyPatternExample/README.md)
+## [Strategy Pattern](StrategyPattern/README.md)
 
-## [Decorator Pattern](DecoratorPatternExample/README.md)
+## [Decorator Pattern](DecoratorPattern/README.md)
 
-## [Observer Pattern]
+## [Observer Pattern](ObserverPattern/README.md)
 
 ### Beispiel
 
