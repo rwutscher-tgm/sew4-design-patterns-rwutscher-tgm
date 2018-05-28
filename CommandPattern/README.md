@@ -10,9 +10,12 @@ Bei einer Fernbedienung sollen sie Funktionen der einzelnen Knöpfe frei zuweisb
 
 ### Lösung
 
+Die einzelnen Funktionen der Fernbedienung werden als Tasks in eigenen Klassen implementiert.
 
 ### UML
-...
+
+![Command UML-Diagramm](CommandUML.png "Command")
+
 ### Code
 
 1) Als erstes muss ein Task Interface geschrieben werden.
