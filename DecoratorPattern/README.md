@@ -14,6 +14,8 @@ Man erstellt eine abstrakte Klasse z.B.: Getraenk, von der alle Basisgetränke u
 
 ### UML
 
+![Decorator UML-Diagramm](DecoratorPattern.png "Decorator")
+
 ### Code
 
 Als erstes müssen zwei abstrakte Klassen erstellt werden:

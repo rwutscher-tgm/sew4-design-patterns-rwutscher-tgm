@@ -11,7 +11,7 @@
 * Factory Pattern (Simple/Abstract)
 * Proxy Pattern
 * Adapter Pattern
-* Command Pattern
+* [Command Pattern](CommandPattern/README.md)
 
 # Grundsätze für Design Patterns
 
@@ -19,3 +19,4 @@
 1) Favorisieren von Kapselung über Vererbung
 1) Programmieren auf interfaces und nicht auf Implementierungen
 1) Streben nach loser Koppelung
+1) Offen für Erweiterungen und geschlossen für Modifikationen/Änderungen
