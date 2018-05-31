@@ -181,6 +181,8 @@ public interface OrganismFactory{
 }
 
 public class AnimalFactory implements OrganismFactory{
+
+    private String nextAnimal;
     
     @Override
     public Animal createRandom(){
