@@ -3,11 +3,11 @@
 (fertig)
 
 * [Strategy Pattern](StrategyPattern)
-* [Decorator Pattern](DecoratorPattern/README.md)
-* [Observer Pattern](ObserverPattern/README.md)
-* [Factory Pattern](FactoryPattern/README.md)
+* [Decorator Pattern](DecoratorPattern)
+* [Observer Pattern](ObserverPattern)
+* [Factory Pattern](FactoryPattern)
 
-* [Command Pattern](CommandPattern/README.md)
+* [Command Pattern](CommandPattern)
 
 (TODO)
 

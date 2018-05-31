@@ -162,3 +162,102 @@ public class BalancedAnimalFactory implements AnimalFactory{
 
 ## Abstract Factory
 
+> Die Abstract Factory ist eine Erweiterung der Factory Method. Beim Abstract Factory Pattern werden mehrere ähnliche Factory Methods in der Selben Factory implementiert.
+
+### Lösung
+
+In der Simulation sollen jetzt auch Bäume erstellt werden. Dazu wird ein Organismus Factory Interface erstellt welches die 2 Factory Methods verlangt. Das Interface wird dann von 2 Factorys implementiert.
+
+### UML
+
+![AbstractFactory UML-Diagramm](AbstractFactory/AbstractFactoryUML.png "AbstractFactory")
+
+### Code
+
+```java
+public interface OrganismFactory{
+    public Organism createBalanced();
+    public Organism createRandom();
+}
+
+public class AnimalFactory implements AnimalFactory{
+    
+    @Override
+    public Animal createRandom(){
+        int rnd = (int) Math.random() * 3;
+
+        if(rnd == 3){
+            return new Dog();
+        }else if(rnd == 2){
+            return new Cat();
+        }else{
+            return new Duck();
+        }
+    }
+
+    @Override
+    public Animal createBalanced(){
+        if(nextAnimal == "Dog"){
+
+            nextAnimal = "Cat";
+            return new Dog();
+
+        }else if(nextAnimal == "Cat"){
+
+            nextAnimal = "Duck";
+            return new Cat();
+
+        }else if(nextAnimal == "Duck"){
+
+            nextAnimal = "Dog";
+            return new Duck();
+
+        }else{
+            nextAnimal = "Cat";
+            return new Dog();
+        }
+    }
+}
+
+public class TreeFactory implements AnimalFactory{
+
+    private String nextTree;
+
+    @Override
+    public Animal createRandom(){
+        int rnd = (int) Math.random() * 3;
+
+        if(rnd == 3){
+            return new Oak();
+        }else if(rnd == 2){
+            return new Birch();
+        }else{
+            return new Sprouce();
+        }
+    }
+
+    @Override
+    public Animal createBalanced(){
+        if(nextTree == "Oak"){
+
+            nextTree = "Birch";
+            return new Oak();
+
+        }else if(nextTree == "Birch"){
+
+            nextTree = "Sprouce";
+            return new Birch();
+
+        }else if(nextTree == "Sprouce"){
+
+            nextTree = "Oak";
+            return new Sprouce();
+
+        }else{
+            nextTree = "Oak";
+            return new Sprouce();
+        }
+    }
+
+}
+```
