@@ -2,12 +2,12 @@ import DisplayStrategies.DisplayStrategy;
 import FlyStrategies.FlyStrategy;
 import QuackStrategies.QuackStrategy;
 
-public class Ente {
+public class Duck {
     private FlyStrategy flyStrat;
     private QuackStrategy quackStrat;
     private DisplayStrategy displayStrat;
 
-    public Ente(FlyStrategy flyStrat, QuackStrategy quackStrat, DisplayStrategy displayStrat){
+    public Duck(FlyStrategy flyStrat, QuackStrategy quackStrat, DisplayStrategy displayStrat){
         this.flyStrat = flyStrat;
         this.quackStrat = quackStrat;
         this.displayStrat = displayStrat;

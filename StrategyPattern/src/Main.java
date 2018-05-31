@@ -9,9 +9,9 @@ import QuackStrategies.NoQuacking;
 public class Main {
 
     public static void main(String[] args) {
-        Ente wildeEnte = new Ente(new FlappFlying(), new LoudQuacking(), new GraphicDisplaying());
-        Ente parkEnte = new Ente(new NoFlying(), new LoudQuacking(), new TextDisplaying());
-        Ente rubberDuck = new Ente(new NoFlying(), new NoQuacking(), new NoDisplaying());
+        Duck wildeEnte = new Duck(new FlappFlying(), new LoudQuacking(), new GraphicDisplaying());
+        Duck parkEnte = new Duck(new NoFlying(), new LoudQuacking(), new TextDisplaying());
+        Duck rubberDuck = new Duck(new NoFlying(), new NoQuacking(), new NoDisplaying());
 
         wildeEnte.display();
         parkEnte.display();

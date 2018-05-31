@@ -99,18 +99,6 @@ public class ChilliAddOn extends AddOnDecorator{
 	}
 }
 
-public class SpinachAddOn extends AddOnDecorator{
-	private Geraenk getrank;
-	
-	public SpinachAddOn(Getraenk getrank){
-		this.getrank = getrank;
-	}
-
-	public double cost(){
-		return this.getrank.cost() + 0.4;
-	}
-}
-
 ```
 
 Letztens können die verschiedenen Kaffes erstellt werden
@@ -119,7 +107,7 @@ Letztens können die verschiedenen Kaffes erstellt werden
 
 public class Main{
 	public static void main(String[] args){
-		Getraenk kaffe1 = new SpinachAddOn(new ChilliAddOn(new Espresso()));
+		Getraenk kaffe1 = new CaramelAddOn(new ChilliAddOn(new Espresso()));
 		Getraenk kaffe2 = new MilkAddOn(new ChocolateAddOn(new Decaffinated()));
 	}
 }
