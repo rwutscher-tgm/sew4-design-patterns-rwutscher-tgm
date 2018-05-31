@@ -1,20 +1,20 @@
-## Observer Pattern
+# Observer Pattern
 
-### Problem
+## Problem
 
 Viele Objekte wollen wissen wenn sich ein Objekt ändert
 
-### Beispiel
+## Beispiel
 
 Es wird eine Wetterstation aufgestellt die mehrere Wetterdaten misst. Viele Displays wollen wissen wann sich die Wetterdaten ändern.
 
-### Lösung
+## Lösung
 
 Man erstellt ein Objekt (Observable) das die gewünschten Daten und eine Collection der Objekte die benachrichtigt werden wollen. Die Objekte die wissen wollen wann sich die Daten ändern (Observer) können sich beim Observable registrieren und abmelden.
 
-### UML
+## UML
 ![Observer UML-Diagramm](ObserverUML.png "Observer")
-### Code
+## Code
 
 Als erstes müssen drei abstrakte Klassen erstellt werden:
 

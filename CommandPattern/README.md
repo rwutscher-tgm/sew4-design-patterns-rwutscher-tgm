@@ -1,22 +1,22 @@
-## Command Pattern
+# Command Pattern
 
-### Problem
+## Problem
 
 Man hat viele Funktionen die man außerhalb von anderen Klassen implementieren will. Meißtens wird das Command Pattern verwendet um den wichtigen Code an einer Stelle zu haben und nicht z.B. eine Model-Klasse bearbeiten zu müssen. Ein weiterer Grund warum man soetwas machen wollen würde ist, dass mehrere Personen an den Funktionen schreiben und man es so besser aufteilen kann.
 
-### Beispiel
+## Beispiel
 
 Bei einer Fernbedienung sollen sie Funktionen der einzelnen Knöpfe frei zuweisbar sein. 
 
-### Lösung
+## Lösung
 
 Die einzelnen Funktionen der Fernbedienung werden als Tasks in eigenen Klassen implementiert.
 
-### UML
+## UML
 
 ![Command UML-Diagramm](CommandUML.png "Command")
 
-### Code
+## Code
 
 1) Als erstes muss ein Task Interface geschrieben werden.
 

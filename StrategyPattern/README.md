@@ -1,22 +1,22 @@
-## Strategy Pattern
+# Strategy Pattern
 
-### Problem:
+## Problem:
 
 Horizontales teilen von funktionalität (zwischen Subklassen)
 
-### Beispiel
+## Beispiel
 
 Die Klasse Ente soll mehrere Subkalassen haben welche teilweise Funktionen gemein haben.
 Z.B.: Es gibt 3 verschiedene Arten von Enten von denen 2 die selbe implementation der fly() Methode haben.
 
-### Lösung
+## Lösung
 
 Die verschiedenen Enten werden nicht durch Vererbung sondern durch Komposition realisiert. D.H.: Man hat einen Pool an verschienenen Implementationen der verschiedenen Funktionen aus denen man seine Enten à la carte (pick and choose) zusammenstellen kann.
 
-### UML
+## UML
 ![Strategy UML-Diagramm](StrategyUML.png "Strategy")
 
-### Code
+## Code
 Zuerst werden Interfaces für die verschiedenen Funktionen der Ente definiert.
 
 ```java

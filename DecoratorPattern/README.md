@@ -1,22 +1,22 @@
-## Decorator Pattern
+# Decorator Pattern
 
-### Problem
+## Problem
 
 Klassenexplosion
 
-### Beispiel
+## Beispiel
 
 Ein Kaffehaus will den Preis seiner Getränke mit einem Programm berechnen. Aber da man zu jedem Getränk noch belibig viele Zusätze dazugeben kann bräuchte man für jede Kombination eine eigene Klasse oder ein komplexes Variablenkonstrukt.
 
-### Lösung
+## Lösung
 
 Man erstellt eine abstrakte Klasse z.B.: Getraenk, von der alle Basisgetränke und die AddOnDecorator Klasse erben. Die Einzelnen Addons erben von der abstrakten AddOnDecorator Klasse und haben ein Attribut der Klasse Getraenk und sind damit Vererbungsmäßig ein Getraenk aber sie haben auch ein Getraenk als Variable. Um Jetzt ein Getränk zu erstellen muss man zuerst ein Basisgetränk haben welches man dann in den verschiedenen AddOns einwickelt. Das wird gemacht indem man sein Getränk einem AddOn als Variable mitgibt. Wenn man jetzt den Preis eines Getränks wissen möchte muss man nur die cost() Methode des "obersten" Objekts aufrufen, welches dann seinen Preis und den Preis des Attribut-Getränks zurück.
 
-### UML
+## UML
 
 ![Decorator UML-Diagramm](DecoratorPattern.png "Decorator")
 
-### Code
+## Code
 
 Als erstes müssen zwei abstrakte Klassen erstellt werden:
 
