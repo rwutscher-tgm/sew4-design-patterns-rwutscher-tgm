@@ -44,13 +44,13 @@ Dann werden die eigentlichen Getränke und AddOns implementiert
 
 ```java
 
-public class Espresso extends Getraenk{
+public class Espresso extends Drink{
 	public double cost(){
 		return 1.50;
 	}
 }
 
-public class Decaffinated extends Getraenk{
+public class Decaffinated extends Drink{
 	public double cost(){
 		return 1.50;
 	}
@@ -59,28 +59,28 @@ public class Decaffinated extends Getraenk{
 public class CaramelAddOn extends AddOnDecorator{
 
 	public double cost(){
-		return this.getrank.cost() + 0.3;
+		return this.drink.cost() + 0.3;
 	}
 }
 
 public class ChocolateAddOn extends AddOnDecorator{
 
 	public double cost(){
-		return this.getrank.cost() + 0.2;
+		return this.drink.cost() + 0.2;
 	}
 }
 
 public class MilkAddOn extends AddOnDecorator{
 
 	public double cost(){
-		return this.getrank.cost() + 0.1;
+		return this.drink.cost() + 0.1;
 	}
 }
 
 public class ChilliAddOn extends AddOnDecorator{
 
 	public double cost(){
-		return this.getrank.cost() + 0.5;
+		return this.drink.cost() + 0.5;
 	}
 }
 
