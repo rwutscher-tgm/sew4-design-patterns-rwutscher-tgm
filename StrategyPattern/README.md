@@ -35,7 +35,7 @@ public interface FlyStrategy{
 
 ```
 
-Dann kann man die Ente Klasse schreiben in der man in den Funktionen einfach 
+Dann kann man die Ente Klasse schreiben in der man in den Funktionen einfach die zugehörigen Funktionen der jeweiligen Strategies aufruft
 
 ```java
 
