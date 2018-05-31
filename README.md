@@ -5,12 +5,13 @@
 * [Strategy Pattern](StrategyPattern/README.md)
 * [Decorator Pattern](DecoratorPattern/README.md)
 * [Observer Pattern](ObserverPattern/README.md)
+* [Factory Pattern](FactoryPattern/README.md)
 
 * [Command Pattern](CommandPattern/README.md)
 
 (TODO)
 
-* Factory Pattern (Simple/Abstract)
+
 * Proxy Pattern
 * Adapter Pattern
 
