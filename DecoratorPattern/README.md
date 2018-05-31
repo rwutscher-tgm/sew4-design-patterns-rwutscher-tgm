@@ -31,11 +31,6 @@ public abstract class Drink{
 
 public abstract class AddOnDecorator extends Drink{
 	protected Drink drink;
-
-	public AddOnDecorator(Drink drink){
-		this.drink = drink;
-	}
-
 }
 
 ```
@@ -45,6 +40,7 @@ Dann werden die eigentlichen Getränke und AddOns implementiert
 ```java
 
 public class Espresso extends Drink{
+
 	public double cost(){
 		return 1.50;
 	}
@@ -58,12 +54,20 @@ public class Decaffinated extends Drink{
 
 public class CaramelAddOn extends AddOnDecorator{
 
+	public CaramelAddOn(Drink drink){
+		this.drink = drink;
+	}
+
 	public double cost(){
 		return this.drink.cost() + 0.3;
 	}
 }
 
 public class ChocolateAddOn extends AddOnDecorator{
+
+	public ChocolateAddOn(Drink drink){
+		this.drink = drink;
+	}
 
 	public double cost(){
 		return this.drink.cost() + 0.2;
@@ -72,6 +76,10 @@ public class ChocolateAddOn extends AddOnDecorator{
 
 public class MilkAddOn extends AddOnDecorator{
 
+	public MilkAddOn(Drink drink){
+		this.drink = drink;
+	}
+
 	public double cost(){
 		return this.drink.cost() + 0.1;
 	}
@@ -79,6 +87,10 @@ public class MilkAddOn extends AddOnDecorator{
 
 public class ChilliAddOn extends AddOnDecorator{
 
+	public ChilliAddOn(Drink drink){
+		this.drink = drink;
+	}
+	
 	public double cost(){
 		return this.drink.cost() + 0.5;
 	}
