@@ -2,7 +2,7 @@
 
 (fertig)
 
-* [Strategy Pattern](StrategyPattern/README.md)
+* [Strategy Pattern](StrategyPattern)
 * [Decorator Pattern](DecoratorPattern/README.md)
 * [Observer Pattern](ObserverPattern/README.md)
 * [Factory Pattern](FactoryPattern/README.md)
