@@ -6,18 +6,18 @@ Horizontales teilen von funktionalität (zwischen Subklassen)
 
 ## Beispiel
 
-Die Klasse Ente soll mehrere Subkalassen haben welche teilweise Funktionen gemein haben.
-Z.B.: Es gibt 3 verschiedene Arten von Enten von denen 2 die selbe implementation der fly() Methode haben.
+Die Klasse Duck soll mehrere Subkalassen haben welche teilweise Funktionen gemein haben.
+Z.B.: Es gibt 3 verschiedene Arten von Ducks von denen 2 die selbe implementation der fly() Methode haben.
 
 ## Lösung
 
-Die verschiedenen Enten werden nicht durch Vererbung sondern durch Komposition realisiert. D.H.: Man hat einen Pool an verschienenen Implementationen der verschiedenen Funktionen aus denen man seine Enten à la carte (pick and choose) zusammenstellen kann.
+Die verschiedenen Ducks werden nicht durch Vererbung sondern durch Komposition realisiert. D.H.: Man hat einen Pool an verschienenen Implementationen der verschiedenen Funktionen aus denen man seine Duck à la carte (pick and choose) zusammenstellen kann.
 
 ## UML
 ![Strategy UML-Diagramm](StrategyUML.png "Strategy")
 
 ## Code
-Zuerst werden Interfaces für die verschiedenen Funktionen der Ente definiert.
+Zuerst werden Interfaces für die verschiedenen Funktionen der Duck definiert.
 
 ```java
 
@@ -35,17 +35,17 @@ public interface FlyStrategy{
 
 ```
 
-Dann kann man die Ente Klasse schreiben in der man in den Funktionen einfach die zugehörigen Funktionen der jeweiligen Strategies aufruft
+Dann kann man die `Duck` Klasse schreiben. In den Funktionen: `display()`, `fly()` und `quack()`, werden die jeweils gleichheißenden Funktionen der zugeörigen Strategies aufgerufen.
 
 ```java
 
-public class Ente{
+public class Duck{
 	
 	private FlyStrategy flyStrat;
 	private QuackStrategy quackStrat;
 	private DisplayStrategy displayStrat;
 
-	public Ente(FlyStrategy flyStrat, QuackStrategy quackStrat, DisplayStrategy displayStrat){
+	public Duck(FlyStrategy flyStrat, QuackStrategy quackStrat, DisplayStrategy displayStrat){
 		this.flyStrat = flyStrat;
 		this.quackStrat = quackStrat;
 		this.displayStrat = displayStrat;
@@ -65,7 +65,7 @@ public class Ente{
 }
 ```
 
-Zuletzt müssen ein paar Implementierungen für die Interfaces geschrieben werden und eine Ente komposiert werden
+Zuletzt müssen ein paar Implementierungen für die Interfaces geschrieben werden und eine Duck komposiert werden
 
 ```java
 /*
@@ -124,22 +124,22 @@ public class NoDisplaying implements DisplayStrategy{
 	}
 }
 
-public class EnteTest{
+public class DuckTest{
 	public static void main(String[] args){
-		Ente wildeEnte = new Ente(new FlappFlying(), new LoudQuacking(), new GraphicDisplaying());
-		Ente parkEnte = new Ente(new NoFlying(), new LoudQuacking(), new GraphicDisplaying());
-		Ente rubberDuck = new Ente(new NoFlying(), new NoQuacking(), new GraphicDisplaying());
+		Duck wildDuck = new Duck(new FlappFlying(), new LoudQuacking(), new GraphicDisplaying());
+		Duck parkDuck = new Duck(new NoFlying(), new LoudQuacking(), new GraphicDisplaying());
+		Duck rubberDuck = new Duck(new NoFlying(), new NoQuacking(), new GraphicDisplaying());
 
-		wildeEnte.display();
-		parkEnte.display();
+		wildDuck.display();
+		parkDuck.display();
 		rubberDuck.display();
 
-		wildeEnte.quack();
-		parkEnte.quack();
+		wildDuck.quack();
+		parkDuck.quack();
 		rubberDuck.quack();
 
-		wildeEnte.fly();
-		parkEnte.fly();
+		wildDuck.fly();
+		parkDuck.fly();
 		rubberDuck.fly();
 	}
 }
