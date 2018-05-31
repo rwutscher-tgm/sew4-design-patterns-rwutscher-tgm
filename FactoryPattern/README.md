@@ -226,7 +226,7 @@ public class TreeFactory implements OrganismFactory{
     private String nextTree;
 
     @Override
-    public Animal createRandom(){
+    public Tree createRandom(){
         int rnd = (int) Math.random() * 3;
 
         if(rnd == 3){
@@ -239,7 +239,7 @@ public class TreeFactory implements OrganismFactory{
     }
 
     @Override
-    public Animal createBalanced(){
+    public Tree createBalanced(){
         if(nextTree == "Oak"){
 
             nextTree = "Birch";
