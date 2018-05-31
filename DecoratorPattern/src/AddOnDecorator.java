@@ -1,6 +1,10 @@
 
-public abstract class AddOnDecorator extends Getraenk{
+public abstract class AddOnDecorator extends Drink{
+	
+	protected Drink drink;
 
-	public abstract double cost();
+	public AddOnDecorator(Drink drink){
+		this.drink = drink;
+	}
 
 }

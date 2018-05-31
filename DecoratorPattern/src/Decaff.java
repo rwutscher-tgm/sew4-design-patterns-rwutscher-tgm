@@ -1,6 +1,6 @@
 public class Decaff {
 
-	private Getraenk getraenk;
+	private Drink drink;
 
 	public double cost() {
 		return 2.7;

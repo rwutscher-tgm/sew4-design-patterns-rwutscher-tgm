@@ -1,5 +1,5 @@
 
-public class Espresso extends Getraenk{
+public class Espresso extends Drink{
 
 	public Espresso(){
 

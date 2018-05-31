@@ -25,12 +25,17 @@ Als erstes müssen zwei abstrakte Klassen erstellt werden:
 
 ```java
 
-public abstract class Getraenk{
+public abstract class Drink{
 	public abstract double cost();
 }
 
-public abstract class AddOnDecorator extends Getraenk{
-	public abstract double cost();
+public abstract class AddOnDecorator extends Drink{
+	protected Drink drink;
+
+	public AddOnDecorator(Drink drink){
+		this.drink = drink;
+	}
+
 }
 
 ```
@@ -52,11 +57,6 @@ public class Decaffinated extends Getraenk{
 }
 
 public class CaramelAddOn extends AddOnDecorator{
-	private Geraenk getrank;
-	
-	public CaramelAddOn(Getraenk getrank){
-		this.getrank = getrank;
-	}
 
 	public double cost(){
 		return this.getrank.cost() + 0.3;
@@ -64,11 +64,6 @@ public class CaramelAddOn extends AddOnDecorator{
 }
 
 public class ChocolateAddOn extends AddOnDecorator{
-	private Geraenk getrank;
-	
-	public ChocolateAddOn(Getraenk getrank){
-		this.getrank = getrank;
-	}
 
 	public double cost(){
 		return this.getrank.cost() + 0.2;
@@ -76,11 +71,6 @@ public class ChocolateAddOn extends AddOnDecorator{
 }
 
 public class MilkAddOn extends AddOnDecorator{
-	private Geraenk getrank;
-	
-	public MilkAddOn(Getraenk getrank){
-		this.getrank = getrank;
-	}
 
 	public double cost(){
 		return this.getrank.cost() + 0.1;
@@ -88,11 +78,6 @@ public class MilkAddOn extends AddOnDecorator{
 }
 
 public class ChilliAddOn extends AddOnDecorator{
-	private Geraenk getrank;
-	
-	public ChilliAddOn(Getraenk getrank){
-		this.getrank = getrank;
-	}
 
 	public double cost(){
 		return this.getrank.cost() + 0.5;
@@ -107,8 +92,8 @@ Letztens können die verschiedenen Kaffes erstellt werden
 
 public class Main{
 	public static void main(String[] args){
-		Getraenk kaffe1 = new CaramelAddOn(new ChilliAddOn(new Espresso()));
-		Getraenk kaffe2 = new MilkAddOn(new ChocolateAddOn(new Decaffinated()));
+		Drink kaffe1 = new CaramelAddOn(new ChilliAddOn(new Espresso()));
+		Drink kaffe2 = new MilkAddOn(new ChocolateAddOn(new Decaffinated()));
 	}
 }
 

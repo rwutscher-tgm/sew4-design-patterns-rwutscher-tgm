@@ -1,5 +1,5 @@
 
-public abstract class Getraenk {
+public abstract class Drink {
 
 	public abstract double cost();
 
