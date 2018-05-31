@@ -14,7 +14,7 @@ In einer Simulation sollen Tiere erstellt werden. Es soll 2 Wege geben ein neues
 Es gibt 3 Tiere welche folgendermaßen implemenTIERt sind:
 
 ```java
-public class Animal{
+public abstract class Animal{
     private String name;
     private String color;
     private int age;
@@ -51,7 +51,7 @@ Es wird eine Klasse erstellt, die von keiner Klasse erbt und kein Interface impl
 ### Code
 
 ```java
-public class AnimalFactory{
+public abstract class AnimalFactory{
 
     public Animal getRandomAnimal(){
         int rnd = (int) Math.random() * 3;
@@ -180,7 +180,7 @@ public interface OrganismFactory{
     public Organism createRandom();
 }
 
-public class AnimalFactory implements AnimalFactory{
+public class AnimalFactory implements OrganismFactory{
     
     @Override
     public Animal createRandom(){
@@ -219,7 +219,7 @@ public class AnimalFactory implements AnimalFactory{
     }
 }
 
-public class TreeFactory implements AnimalFactory{
+public class TreeFactory implements OrganismFactory{
 
     private String nextTree;
 

@@ -1,16 +1,16 @@
 # Design Patterns
 
-(fertig)
+## GK Patterns
 
 * [Strategy Pattern](StrategyPattern)
 * [Decorator Pattern](DecoratorPattern)
 * [Observer Pattern](ObserverPattern)
 * [Factory Pattern](FactoryPattern)
 
+# EK Patterns
+
 * [Command Pattern](CommandPattern)
-
-(TODO)
-
+* [Singleton Pattern](Singleton)
 
 * Proxy Pattern
 * Adapter Pattern
