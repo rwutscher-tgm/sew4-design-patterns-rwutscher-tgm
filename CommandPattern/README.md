@@ -20,12 +20,12 @@ Die einzelnen Funktionen der Fernbedienung werden als Tasks in eigenen Klassen i
 
 ## Code
 
-1) Als erstes muss ein Task Interface geschrieben werden.
+1) Als erstes muss ein commandPattern.Task Interface geschrieben werden.
 
 > Die unExecute Methode wird nicht immer verwendet
 
 ```java
-public interface Task {
+public interface commandPattern.Task {
     public void execute();
     public void unExecute();
 }
@@ -34,11 +34,11 @@ public interface Task {
 2) Dann können die einzelnen Tasks implementiert werden
 
 ```java
-public class TurnOnLight implements Task{
+public class commandPattern.TurnOnLight implements Task{
 
     private Lamp lamp;
 
-    public TurnOnLight(Lamp lamp) {
+    public commandPattern.TurnOnLight(Lamp lamp) {
         this.lamp = lamp;
     }
 
