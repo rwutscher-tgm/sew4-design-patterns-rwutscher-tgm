@@ -1,21 +1,11 @@
-[[back](../)]
-
 # Design Patterns
-
-## GK Patterns
 
 * [Strategy Pattern](StrategyPattern)
 * [Decorator Pattern](DecoratorPattern)
 * [Observer Pattern](ObserverPattern)
 * [Factory Pattern](FactoryPattern)
 
-# EK Patterns
-
 * [Command Pattern](CommandPattern)
-* [Singleton Pattern](Singleton)
-
-* Proxy Pattern
-* Adapter Pattern
 
 
 # Grundsätze für Design Patterns
