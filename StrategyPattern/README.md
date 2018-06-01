@@ -7,18 +7,18 @@ Funktionalität soll zwischen mehreren Objekten geteilt werden
 
 ## Beispiel
 
-Die Klasse Duck soll mehrere Subklassen haben welche teilweise Funktionen gemein haben.
+Die Klasse strategyPattern.Duck soll mehrere Subklassen haben welche teilweise Funktionen gemein haben.
 Z.B.: Es gibt 3 verschiedene Arten von Ducks von denen 2 die selbe Implementation der fly() Methode haben.
 
 ## Lösung
 
-Die verschiedenen Ducks werden nicht durch Vererbung sondern durch Komposition realisiert. D.H.: Man hat einen Pool an verschienenen Implementationen der verschiedenen Funktionen aus denen man seine Duck à la carte (pick and choose) zusammenstellen kann.
+Die verschiedenen Ducks werden nicht durch Vererbung sondern durch Komposition realisiert. D.H.: Man hat einen Pool an verschienenen Implementationen der verschiedenen Funktionen aus denen man seine strategyPattern.Duck à la carte (pick and choose) zusammenstellen kann.
 
 ## UML
 ![Strategy UML-Diagramm](StrategyUML.png "Strategy")
 
 ## Code
-Zuerst werden Interfaces für die verschiedenen Funktionen der Duck definiert.
+Zuerst werden Interfaces für die verschiedenen Funktionen der strategyPattern.Duck definiert.
 
 ```java
 
@@ -36,17 +36,17 @@ public interface FlyStrategy{
 
 ```
 
-Dann kann man die `Duck` Klasse schreiben. In den Funktionen: `display()`, `fly()` und `quack()`, werden die jeweils Gleichheißenden Funktionen der zugehörigen Strategies aufgerufen.
+Dann kann man die `strategyPattern.Duck` Klasse schreiben. In den Funktionen: `display()`, `fly()` und `quack()`, werden die jeweils Gleichheißenden Funktionen der zugehörigen Strategies aufgerufen.
 
 ```java
 
-public class Duck{
+public class strategyPattern.Duck{
 	
 	private FlyStrategy flyStrat;
 	private QuackStrategy quackStrat;
 	private DisplayStrategy displayStrat;
 
-	public Duck(FlyStrategy flyStrat, QuackStrategy quackStrat, DisplayStrategy displayStrat){
+	public strategyPattern.Duck(FlyStrategy flyStrat, QuackStrategy quackStrat, DisplayStrategy displayStrat){
 		this.flyStrat = flyStrat;
 		this.quackStrat = quackStrat;
 		this.displayStrat = displayStrat;
@@ -66,7 +66,7 @@ public class Duck{
 }
 ```
 
-Zuletzt müssen ein paar Implementierungen für die Interfaces geschrieben werden und eine Duck erstellt werden
+Zuletzt müssen ein paar Implementierungen für die Interfaces geschrieben werden und eine strategyPattern.Duck erstellt werden
 
 ```java
 /*
