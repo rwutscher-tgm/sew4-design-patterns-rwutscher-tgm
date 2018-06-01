@@ -4,11 +4,11 @@
 
 ## Problem
 
-Viele Objekte wollen wissen wenn sich ein Objekt ändert
+Viele Objekte wollen wissen wenn, sich ein Objekt ändert
 
 ## Beispiel
 
-Es wird eine Wetterstation aufgestellt die mehrere Wetterdaten misst. Viele Displays wollen wissen wann sich die Wetterdaten ändern.
+Es wird eine Wetterstation aufgestellt die mehrere Wetterdaten misst. Viele Displays wollen wissen wenn sich die Wetterdaten ändern.
 
 ## Lösung
 

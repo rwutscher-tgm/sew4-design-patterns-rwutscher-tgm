@@ -1,5 +1,7 @@
 # Design Patterns
 
+Dieses Repository ist eine Erklärung der folgenden Patterns:
+
 * [Strategy Pattern](StrategyPattern)
 * [Decorator Pattern](DecoratorPattern)
 * [Observer Pattern](ObserverPattern)

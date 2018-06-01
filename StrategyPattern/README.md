@@ -1,14 +1,14 @@
-[[back](../README.md)]
+ [[back](../README.md)]
 # Strategy Pattern
 
 ## Problem:
 
-Horizontales teilen von funktionalität (zwischen Subklassen)
+Funktionalität soll zwischen mehreren Objekten geteilt werden
 
 ## Beispiel
 
-Die Klasse Duck soll mehrere Subkalassen haben welche teilweise Funktionen gemein haben.
-Z.B.: Es gibt 3 verschiedene Arten von Ducks von denen 2 die selbe implementation der fly() Methode haben.
+Die Klasse Duck soll mehrere Subklassen haben welche teilweise Funktionen gemein haben.
+Z.B.: Es gibt 3 verschiedene Arten von Ducks von denen 2 die selbe Implementation der fly() Methode haben.
 
 ## Lösung
 
@@ -36,7 +36,7 @@ public interface FlyStrategy{
 
 ```
 
-Dann kann man die `Duck` Klasse schreiben. In den Funktionen: `display()`, `fly()` und `quack()`, werden die jeweils gleichheißenden Funktionen der zugeörigen Strategies aufgerufen.
+Dann kann man die `Duck` Klasse schreiben. In den Funktionen: `display()`, `fly()` und `quack()`, werden die jeweils Gleichheißenden Funktionen der zugehörigen Strategies aufgerufen.
 
 ```java
 
@@ -66,7 +66,7 @@ public class Duck{
 }
 ```
 
-Zuletzt müssen ein paar Implementierungen für die Interfaces geschrieben werden und eine Duck komposiert werden
+Zuletzt müssen ein paar Implementierungen für die Interfaces geschrieben werden und eine Duck erstellt werden
 
 ```java
 /*

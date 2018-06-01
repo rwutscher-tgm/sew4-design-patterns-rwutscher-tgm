@@ -8,7 +8,7 @@ Klassenexplosion
 
 ## Beispiel
 
-Ein Kaffehaus will den Preis seiner Getränke mit einem Programm berechnen. Aber da man zu jedem Getränk noch belibig viele Zusätze dazugeben kann bräuchte man für jede Kombination eine eigene Klasse oder ein komplexes Variablenkonstrukt.
+Ein Kaffeehaus will den Preis seiner Getränke mit einem Programm berechnen. Aber da man zu jedem Getränk noch beliebig viele Zusätze dazugeben kann bräuchte man für jede Kombination eine eigene Klasse oder ein komplexes Variablenkonstrukt.
 
 ## Lösung
 
@@ -20,7 +20,7 @@ Man erstellt eine abstrakte Klasse z.B.: Getraenk, von der alle Basisgetränke u
 
 ## Code
 
-Als erstes müssen zwei abstrakte Klassen erstellt werden:
+Als Erstes müssen zwei abstrakte Klassen erstellt werden:
 
 * Die Gertaenk Klasse mit der abstrakten methode cost()
 * Die AddOnDecorator Klasse die eine Subklasse von Geraenk ist

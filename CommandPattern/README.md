@@ -4,11 +4,11 @@
 
 ## Problem
 
-Man hat viele Funktionen die man außerhalb von anderen Klassen implementieren will. Meißtens wird das Command Pattern verwendet um den wichtigen Code an einer Stelle zu haben und nicht z.B. eine Model-Klasse bearbeiten zu müssen. Ein weiterer Grund warum man soetwas machen wollen würde ist, dass mehrere Personen an den Funktionen schreiben und man es so besser aufteilen kann.
+Man hat viele Funktionen die man außerhalb von anderen Klassen implementieren will. Meistens wird das Command Pattern verwendet um den wichtigen Code an einer Stelle zu haben und nicht z.B. eine Model-Klasse bearbeiten zu müssen. Ein weiterer Grund warum man so etwas machen wollen würde ist, dass mehrere Personen an den Funktionen schreiben und man es so besser aufteilen kann.
 
 ## Beispiel
 
-Bei einer Fernbedienung sollen sie Funktionen der einzelnen Knöpfe frei zuweisbar sein. 
+Bei einer Fernbedienung sollen sie Funktionen der einzelnen Knöpfe frei zuweisbar sein.
 
 ## Lösung
 

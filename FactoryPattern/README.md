@@ -4,14 +4,14 @@
 
 ## Problem
 
-Zum erstellen eines Objekts braucht man mehr Code als nur ```new``` (z.B.: Um herauszufinden Welche Implementierung oder welche Parameter).Wenn man ein Objekt mit dem genau gleichen Ablauf mehrmals erstellen muss, fällt einem auf, dass man gegen den ersten Grundsatz von Patterns verstöst: Veränderbares von unveränderbarem Trennen. 
+Zum erstellen eines Objekts braucht man mehr Code als nur ```new``` (z.B.: Um herauszufinden Welche Implementierung oder welche Parameter).Wenn man ein Objekt mit dem genau gleichen Ablauf mehrmals erstellen muss, fällt einem auf, dass man gegen den ersten Grundsatz von Patterns verstößt: Veränderbares von unveränderbarem Trennen. 
 
 ## Beispiel
 
 In einer Simulation sollen Tiere erstellt werden. Es soll 2 Wege geben ein neues Tier zu erstellen:
 
 * createRandomAnimal: erzeugt bei jedem Aufruf ein zufälliges Tier
-* createBalancedAnimal: balanciert die Anzahl der einzelnen Tiere durch logik aus.
+* createBalancedAnimal: balanciert die Anzahl der einzelnen Tiere durch Logik aus.
 
 Es gibt 3 Tiere welche folgendermaßen implemenTIERt sind:
 
@@ -53,7 +53,7 @@ Es wird eine Klasse erstellt, die von keiner Klasse erbt und kein Interface impl
 ### Code
 
 ```java
-public abstract class AnimalFactory{
+public class AnimalFactory{
 
     public Animal getRandomAnimal(){
         int rnd = (int) Math.random() * 3;
@@ -69,7 +69,7 @@ public abstract class AnimalFactory{
 
     private String nextAnimal;
 
-    public Ainimal getBalancedAnimal(){
+    public Animal getBalancedAnimal(){
         if(nextAnimal == "Dog"){
 
             nextAnimal = "Cat";
@@ -95,7 +95,7 @@ public abstract class AnimalFactory{
 
 ## Factory Method
 
-> Bei der Factory Method implementiert jede Factory ein Interface oder erbt von einer Superklasse. Die erstellung der Objekte wird den subklassen/implementierungen überlassen
+> Bei der Factory Method implementiert jede Factory ein Interface oder erbt von einer Superklasse. Die Erstellung der Objekte wird den Subklassen/Implementierungen überlassen
 
 ### Lösung
 
