@@ -1,4 +1,4 @@
-[[back](../)]
+[[back](../README.md)]
 
 # Factory Pattern
 

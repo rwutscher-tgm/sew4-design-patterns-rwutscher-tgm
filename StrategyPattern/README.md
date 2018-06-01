@@ -1,5 +1,4 @@
-[[back](../)]
-
+[[back](../README.md)]
 # Strategy Pattern
 
 ## Problem:
