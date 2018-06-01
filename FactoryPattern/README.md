@@ -2,7 +2,7 @@
 
 ## Problem
 
-Zum erstellen eines Objekts braucht man mehr Code als nur ```new``` (z.B.: Um herauszufinden Welche Implementierung oder weche Parameter).Wenn man ein Objekt mit dem genau gleichen Ablauf mehrmals erstellen muss, fällt einem auf, dass man gegen den ersten Grundsatz von Patterns verstöst: Veränderbares von unveränderbarem Trennen. 
+Zum erstellen eines Objekts braucht man mehr Code als nur ```new``` (z.B.: Um herauszufinden Welche Implementierung oder welche Parameter).Wenn man ein Objekt mit dem genau gleichen Ablauf mehrmals erstellen muss, fällt einem auf, dass man gegen den ersten Grundsatz von Patterns verstöst: Veränderbares von unveränderbarem Trennen. 
 
 ## Beispiel
 

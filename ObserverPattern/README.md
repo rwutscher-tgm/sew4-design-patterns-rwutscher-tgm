@@ -64,9 +64,7 @@ public abstract class Observer{
     /**
      * Meldet das Display von der Wetterstation ab
      */
-    public void close(){
-        
-    }
+    public abstract void close();
 }
 
 public abstract class Display extends Observer{
