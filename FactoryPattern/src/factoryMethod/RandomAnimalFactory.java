@@ -1,10 +1,14 @@
 package factoryMethod;
 
+import java.util.Random;
+
 public class RandomAnimalFactory implements AnimalFactory{
 
     @Override
     public Animal createAnimal(){
-        int rnd = (int) Math.random() * 3;
+        Random rand = new Random();
+        int rnd = rand.nextInt(3)+1;
+
 
         if(rnd == 3){
             return new Dog();

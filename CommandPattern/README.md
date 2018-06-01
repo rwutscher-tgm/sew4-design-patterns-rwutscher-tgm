@@ -48,7 +48,7 @@ public class commandPattern.TurnOnLight implements Task{
     }
 
     @Override
-    private void unExecute(){
+    public void unExecute(){
     	...
     }
 }

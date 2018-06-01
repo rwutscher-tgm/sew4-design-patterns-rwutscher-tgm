@@ -56,7 +56,8 @@ Es wird eine Klasse erstellt, die von keiner Klasse erbt und kein Interface impl
 public class AnimalFactory{
 
     public Animal getRandomAnimal(){
-        int rnd = (int) Math.random() * 3;
+        Random rand = new Random();
+        int rnd = rand.nextInt(3)+1;
 
         if(rnd == 3){
             return new Dog();
@@ -120,7 +121,8 @@ public class RandomAnimalFactory implements AnimalFactory{
     
     @Override
     public Animal createAnimal(){
-        int rnd = (int) Math.random() * 3;
+        Random rand = new Random();
+        int rnd = rand.nextInt(3)+1;
 
         if(rnd == 3){
             return new Dog();
@@ -188,7 +190,8 @@ public class AnimalFactory implements OrganismFactory{
     
     @Override
     public Animal createRandom(){
-        int rnd = (int) Math.random() * 3;
+        Random rand = new Random();
+        int rnd = rand.nextInt(3)+1;
 
         if(rnd == 3){
             return new Dog();
@@ -229,7 +232,8 @@ public class TreeFactory implements OrganismFactory{
 
     @Override
     public Tree createRandom(){
-        int rnd = (int) Math.random() * 3;
+        Random rand = new Random();
+        int rnd = rand.nextInt(3)+1;
 
         if(rnd == 3){
             return new Oak();

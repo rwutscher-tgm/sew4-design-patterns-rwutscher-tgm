@@ -1,12 +1,15 @@
 package abstractFactory;
 
+import java.util.Random;
+
 public class AnimalFactory implements OrganismFactory{
 
     private String nextAnimal;
 
     @Override
     public Animal createRandom(){
-        int rnd = (int) Math.random() * 3;
+        Random rand = new Random();
+        int rnd = rand.nextInt(3)+1;
 
         if(rnd == 3){
             return new Dog();
