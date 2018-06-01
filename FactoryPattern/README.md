@@ -1,3 +1,5 @@
+[[back](../)]
+
 # Factory Pattern
 
 ## Problem

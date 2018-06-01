@@ -1,3 +1,5 @@
+[[back](../)]
+
 # Strategy Pattern
 
 ## Problem:

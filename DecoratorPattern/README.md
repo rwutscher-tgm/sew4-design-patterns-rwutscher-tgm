@@ -1,3 +1,5 @@
+[[back](../)]
+
 # Decorator Pattern
 
 ## Problem
@@ -90,7 +92,7 @@ public class ChilliAddOn extends AddOnDecorator{
 	public ChilliAddOn(Drink drink){
 		this.drink = drink;
 	}
-	
+
 	public double cost(){
 		return this.drink.cost() + 0.5;
 	}
